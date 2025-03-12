@@ -1,6 +1,24 @@
 const layers = ['crust', 'mantle', 'outer-core', 'inner-core'];
 let num = 0;
 
+function stars() {
+  const body = document.querySelector('body');
+
+  for (let i = 0; i < 200; i++) {
+    const randNumTop = Math.floor(Math.random() * 100);
+    const randNumRight = Math.floor(Math.random() * 100);
+
+    const stars = document.createElement('p');
+    stars.classList.add('star');
+    stars.textContent = '.';
+
+    stars.style.top = `${randNumTop}vh`;
+    stars.style.right = `${randNumRight}vw`;
+
+    body.appendChild(stars);
+  }
+}
+
 function changeLayer() {
   const htmlLayers = document.querySelectorAll('.layer');
   const goBack = document.querySelector('.go-back');
@@ -40,3 +58,4 @@ function changeLayer() {
 }
 
 changeLayer();
+stars();
