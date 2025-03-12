@@ -1,0 +1,26 @@
+* {
+  background-color: #1a1c1d;
+  color: white;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80vh;
+  width: 90%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  border: solid white;
+  cursor: pointer;
+}
+
+button > img {
+  width: 50px;
+}
