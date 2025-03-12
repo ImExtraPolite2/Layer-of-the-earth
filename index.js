@@ -11,11 +11,25 @@ function stars() {
     const stars = document.createElement('p');
     stars.classList.add('star');
     stars.textContent = '.';
-
     stars.style.top = `${randNumTop}vh`;
     stars.style.right = `${randNumRight}vw`;
-
     body.appendChild(stars);
+  }
+}
+
+function applyShine() {
+  const stars = document.querySelectorAll('.star');
+
+  for (let i = 0; i < stars.length; i++) {
+    if (i < 50) {
+      stars[i].style.animation = 'shining 4000ms ease-in-out infinite';
+    } else if (i > 50 && i < 100) {
+      stars[i].style.animation = 'shining 4000ms 1000ms ease-in-out infinite';
+    } else if (i > 100 && i < 150) {
+      stars[i].style.animation = 'shining 4000ms 2000ms ease-in-out infinite';
+    } else {
+      stars[i].style.animation = 'shining 4000ms 3000ms ease-in-out infinite';
+    }
   }
 }
 
@@ -59,3 +73,4 @@ function changeLayer() {
 
 changeLayer();
 stars();
+applyShine();

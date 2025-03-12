@@ -19,10 +19,15 @@ body {
 
 .star {
   position: absolute;
+  opacity: 0;
 }
 
 .Earth {
   z-index: 10;
+}
+
+.crust > img {
+  width: 35vw;
 }
 
 h1 {
@@ -40,4 +45,16 @@ button > img {
 
 .inner-core > img {
   width: 20vw;
+}
+
+@keyframes shining {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
