@@ -7,6 +7,44 @@ body {
   background-color: #1a1c1d;
 }
 
+.play-sound {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.off-button {
+  width: 0;
+  padding: 15px;
+  background-color: red;
+  border-radius: 25px;
+  position: absolute;
+}
+
+.off-outer {
+  width: 0;
+  padding: 15px 30px;
+  background-color: lightcoral;
+  border-radius: 25px;
+}
+
+.on-button {
+  width: 0;
+  padding: 15px;
+  background-color: green;
+  border-radius: 25px;
+  position: absolute;
+  right: 0;
+}
+
+.on-outer {
+  width: 0;
+  padding: 15px 30px;
+  background-color: lightgreen;
+  border-radius: 25px;
+}
+
 .content {
   position: relative;
   display: flex;
@@ -15,6 +53,13 @@ body {
   height: 80vh;
   width: 90%;
   margin: auto;
+}
+
+.content > button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  height: 20vh;
+  width: 7vw;
 }
 
 .star {
@@ -31,6 +76,7 @@ body {
 }
 
 h1 {
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -56,5 +102,41 @@ button > img {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes moveFromMiddleToLeft {
+  100% {
+    transform: translateX(50vw);
+    opacity: 0;
+  }
+}
+
+@keyframes moveFromMiddleToRight {
+  100% {
+    transform: translateX(-50vw);
+    opacity: 0;
+  }
+}
+
+@keyframes moveFromLeft {
+  0% {
+    transform: translateX(-50vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0vw);
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+    transform: translateX(50vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0vw);
+    opacity: 1;
   }
 }
