@@ -57,7 +57,7 @@ body {
 
 .content > button {
   background-color: rgba(0, 0, 0, 0.5);
-  border: none;
+  /* border: none; */
   height: 20vh;
   width: 7vw;
 }
@@ -67,8 +67,21 @@ body {
   opacity: 0;
 }
 
-.Earth {
+.Earth,
+.sound-on,
+.go-back,
+.go-forward {
   z-index: 10;
+}
+
+.go-back,
+.go-forward {
+  transition: all 200ms;
+}
+
+.go-back:hover,
+.go-forward:hover {
+  transform: scale(1.1);
 }
 
 .crust > img {
